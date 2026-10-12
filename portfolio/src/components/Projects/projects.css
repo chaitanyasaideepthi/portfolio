@@ -1,64 +1,66 @@
+
+/* Projects Section */
 .projects-section {
-  min-height: 100vh;
   padding: 80px 8%;
-  background: #020b1c;
-  color: white;
+  background: #f8fafc;
+  color: #1e293b;
 }
 
 /* Heading */
-
 .projects-heading {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .projects-heading h2 {
-  font-size: 45px;
+  font-size: 36px;
+  font-weight: 700;
   margin-bottom: 15px;
+  color: #0f172a;
 }
 
 .projects-heading h2 span {
-  color: #00aaff;
+  color: #2563eb;
 }
 
 .projects-heading p {
-  color: #aeb9ce;
-  font-size: 18px;
+  font-size: 16px;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
-/* Cards Container */
-
+/* Projects Container */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 45px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Project Card */
-
 .project-card {
-  background: #081531;
-  border: 1px solid #16476d;
-  border-radius: 22px;
-  padding: 28px;
-  transition: 0.3s ease;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: #00aaff;
-  box-shadow: 0 10px 35px rgba(0, 170, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
 }
 
-/* Image */
-
+/* Project Image */
 .project-image {
   width: 100%;
-  height: 280px;
+  height: 200px;
   overflow: hidden;
-  border-radius: 15px;
-  border: 1px solid #123a5c;
-  background: #061126;
+  background: #e2e8f0;
 }
 
 .project-image img {
@@ -66,87 +68,106 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* Content */
-
+/* Project Content */
 .project-content {
-  padding-top: 25px;
+  padding: 24px;
 }
 
 .project-content h3 {
-  font-size: 32px;
-  margin-bottom: 18px;
-  color: #ffffff;
+  font-size: 22px;
+  color: #0f172a;
+  margin: 0 0 12px;
 }
 
 .project-description {
-  color: #b5c0d4;
-  font-size: 18px;
+  font-size: 15px;
+  color: #64748b;
   line-height: 1.7;
+  min-height: 76px;
   margin-bottom: 20px;
 }
 
-/* Technologies */
-
+/* Technology Tags */
 .technologies {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
 .technologies span {
-  color: #00aaff;
-  background: #102b61;
-  padding: 8px 16px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 7px 12px;
   border-radius: 20px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
 }
 
-/* Link */
-
+/* View Project Link */
 .project-link {
   display: inline-block;
+  background: #2563eb;
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  transition: 0.3s;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .project-link:hover {
-  color: #00aaff;
-  transform: translateX(5px);
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-/* Mobile */
-
-@media (max-width: 768px) {
   .projects-section {
-    padding: 60px 5%;
+    padding: 65px 5%;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+  .projects-section {
+    padding: 50px 20px;
   }
 
   .projects-heading h2 {
-    font-size: 35px;
+    font-size: 30px;
+  }
+
+  .projects-heading p {
+    font-size: 14px;
   }
 
   .projects-container {
     grid-template-columns: 1fr;
+    gap: 22px;
   }
 
   .project-image {
-    height: 220px;
+    height: 190px;
   }
 
-  .project-content h3 {
-    font-size: 27px;
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-description {
+    min-height: auto;
   }
 }

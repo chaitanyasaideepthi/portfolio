@@ -1,7 +1,14 @@
-
 import "./Projects.css";
 
 const projects = [
+  {
+    title: "Job Portal",
+    image: "/images/job portal.png",
+    description:
+      "A job portal web application built using React.js that helps users explore job opportunities through a user-friendly interface.",
+    technologies: ["React.js", "JavaScript", "CSS", "Firebase"],
+    link: "https://job-xi-eight.vercel.app/",
+  },
   {
     title: "OOSA Healthcare",
     image: "/images/oosa.png",
