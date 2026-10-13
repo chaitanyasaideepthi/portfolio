@@ -1,9 +1,9 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Skills from "./components/Skills/Skills";
+import Skills from "./components/skills/skills.jsx";
 import Services from "./components/Services";
-import Project from "./components/projects/projects.jsx";
+import Project from "./components/Projects/Projects.jsx";
 import Certificates from "./components/Certificates/Certificates";
 import ContactSection from "./components/ContactSection/contact";
 
