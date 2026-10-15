@@ -1,9 +1,10 @@
+
 import "./Projects.css";
 
 const projects = [
   {
     title: "Job Portal",
-    image: "/images/job portal.png",
+    image: `${import.meta.env.BASE_URL}images/job%20portal.png`,
     description:
       "A job portal web application built using React.js that helps users explore job opportunities through a user-friendly interface.",
     technologies: ["React.js", "JavaScript", "CSS", "Firebase"],
@@ -11,7 +12,7 @@ const projects = [
   },
   {
     title: "OOSA Healthcare",
-    image: "/images/oosa.png",
+    image: `${import.meta.env.BASE_URL}images/oosa.png`,
     description:
       "A modern healthcare company website built using React.js with a clean, responsive user interface.",
     technologies: ["React.js", "HTML", "CSS"],
@@ -19,11 +20,11 @@ const projects = [
   },
   {
     title: "Weather Forecast App",
-    image: "/images/weather.png",
+    image: `${import.meta.env.BASE_URL}images/weather.png`,
     description:
       "A responsive weather application that displays weather information using a weather API.",
     technologies: ["React.js", "JavaScript", "REST API", "CSS"],
-    link: "http://weather-forecast-f48wuyv3j-chaitanyasaideepthi.vercel.app/",
+    link: "https://weather-forecast-f48wuyv3j-chaitanyasaideepthi.vercel.app/",
   },
 ];
 
@@ -34,10 +35,9 @@ function Projects() {
         <h2>
           My <span>Projects</span>
         </h2>
-
         <p>
-          Here are some of the projects I've built to improve my skills and
-          explore new technologies.
+          Here are some of the projects I've built to improve my
+          skills and explore new technologies.
         </p>
       </div>
 
@@ -45,7 +45,17 @@ function Projects() {
         {projects.map((project) => (
           <div className="project-card" key={project.title}>
             <div className="project-image">
-              <img src={project.image} alt={project.title} />
+              <img
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+                onError={(event) => {
+                  console.error(
+                    "Failed to load image:",
+                    event.currentTarget.src
+                  );
+                }}
+              />
             </div>
 
             <div className="project-content">
