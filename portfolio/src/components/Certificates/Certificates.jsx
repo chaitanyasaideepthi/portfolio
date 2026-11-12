@@ -14,18 +14,6 @@ const certificates = [
     title: "Certificate 3",
     image: "certificate3.png",
   },
-  {
-    title: "Certificate 4",
-    image: "certificate4.png",
-  },
-  {
-    title: "Certificate 5",
-    image: "certificate5.png",
-  },
-  {
-    title: "Certificate 6",
-    image: "certificate6.png",
-  },
 ];
 
 function Certificates() {
@@ -60,5 +48,6 @@ function Certificates() {
 }
 
 export default Certificates;
+
 
 
